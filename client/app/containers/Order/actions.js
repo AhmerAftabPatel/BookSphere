@@ -191,6 +191,10 @@ export const updateOrderItemStatus = (itemId, status) => {
   };
 };
 
+export const processOrder = () => {
+    push(`/order/process/${response.data.order._id}`);
+};
+
 export const addOrder = () => {
   return async (dispatch, getState) => {
     try {
@@ -220,7 +224,7 @@ export const placeOrder = () => {
 
     if (token && cartItems.length > 0) {
       Promise.all([dispatch(getCartId())]).then(() => {
-        dispatch(addOrder());
+        dispatch(processOrder());
       });
     }
 

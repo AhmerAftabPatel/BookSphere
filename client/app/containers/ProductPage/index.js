@@ -75,7 +75,7 @@ class ProductPage extends React.PureComponent {
                     // }`}
                     src={`${
                       product.imageUrl
-                        ? "/images/book-covers/"  + product.imageUrl
+                        ? product.imageUrl
                         : '/images/placeholder-image.png'
                     }`}
                   />

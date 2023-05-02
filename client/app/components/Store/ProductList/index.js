@@ -42,7 +42,7 @@ const ProductList = (props) => {
                         // }`}
                         src={`${
                           product.imageUrl
-                            ? '/images/book-covers/' + product.imageUrl
+                            ? product.imageUrl
                             : '/images/placeholder-image.png'
                         }`}
                       />

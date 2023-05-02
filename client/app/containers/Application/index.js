@@ -88,6 +88,7 @@ class Application extends React.PureComponent {
                 <Route path='/brands' component={BrandsPage} />
                 <Route path='/product/:slug' component={ProductPage} />
                 <Route path='/order/success/:id' component={OrderSuccess} />
+                <Route path='/order/process/:id' component={OrderSuccess} />
                 <Route path='/order/:id' component={OrderPage} />
                 <Route path='/login' component={Login} />
                 <Route path='/register' component={Signup} />
