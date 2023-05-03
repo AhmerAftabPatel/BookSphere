@@ -25,7 +25,7 @@ const AccountDetails = props => {
     <div className='account-details'>
       <div className='info'>
         <div className='desc'>
-          <p className='one-line-ellipsis mr-3'>
+          {/* <p className='one-line-ellipsis mr-3'>
             {user.provider === EMAIL_PROVIDER.Email ? (
               user.email
             ) : (
@@ -33,13 +33,14 @@ const AccountDetails = props => {
                 Logged in With {user.provider}
               </span>
             )}
-          </p>
-          <UserRole user={user} />
+          </p> */}
+          {/* <UserRole user={user} /> */}
+          <h2>Hello, {user.firstName}</h2>
         </div>
       </div>
       <form onSubmit={handleSubmit}>
         <Row>
-          <Col xs='12' md='6'>
+          <Col xs='12' md='4'>
             <Input
               type={'text'}
               label={'First Name'}
@@ -51,13 +52,25 @@ const AccountDetails = props => {
               }}
             />
           </Col>
-          <Col xs='12' md='6'>
+          <Col xs='12' md='4'>
             <Input
               type={'text'}
               label={'Last Name'}
               name={'lastName'}
               placeholder={'Please Enter Your Last Name'}
               value={user.lastName ? user.lastName : ''}
+              onInputChange={(name, value) => {
+                accountChange(name, value);
+              }}
+            />
+          </Col>
+          <Col xs='12' md='4'>
+            <Input
+              type={'text'}
+              label={'Email'}
+              name={'email'}
+              placeholder={'Please Enter Your Email Address'}
+              value={user.email ? user.email : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
               }}
@@ -76,7 +89,7 @@ const AccountDetails = props => {
               }}
             />
           </Col> */}
-          <Col xs='12' md='12'>
+          <Col xs='12' md='4'>
             <Input
               type={'text'}
               label={'Phone Number'}
@@ -88,10 +101,35 @@ const AccountDetails = props => {
               }}
             />
           </Col>
+          <Col xs='12' md='4'>
+            <Input
+              type={'text'}
+              label={'DoB'}
+              name={'dob'}
+              placeholder={'MM/DD/YYYY'}
+              value={user.email ? user.email : ''}
+              onInputChange={(name, value) => {
+                accountChange(name, value);
+              }}
+            />
+          </Col>
+          <Col xs='12' md='4'>
+            <Input
+              type={'password'}
+              label={'Password'}
+              name={'password'}
+              // placeholder={'Please Enter Your Last Name'}
+              value={user.email ? user.email : ''}
+              onInputChange={(name, value) => {
+                accountChange(name, value);
+              }}
+            />
+          </Col>
         </Row>
-        <hr />
+        {/* <hr /> */}
         <div className='profile-actions'>
-          <Button type='submit' variant='secondary' text='Save changes' />
+          <Button type='submit' variant='secondary' text='Save changes' /> &nbsp;
+          <Button type='submit' variant='secondary' text='Change Password' />
         </div>
       </form>
     </div>

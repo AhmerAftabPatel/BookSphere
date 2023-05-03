@@ -27,11 +27,11 @@ import Wishlist from '../../../containers/WishList';
 const Admin = props => {
   return (
     <div className='admin'>
-      <Row>
-        <Col xs='12' md='5' xl='3'>
+      {/* <Row> */}
+        {/* <Col xs='12' md='5' xl='3'>
           <AccountMenu {...props} />
-        </Col>
-        <Col xs='12' md='7' xl='9'>
+        </Col> */}
+        {/* <Col xs='12' md='7' xl='9'> */}
           <div className='panel-body'>
             <Switch>
               <Route exact path='/dashboard' component={Account} />
@@ -44,12 +44,12 @@ const Admin = props => {
               <Route path='/dashboard/merchant' component={Merchant} />
               <Route path='/dashboard/orders' component={Order} />
               <Route path='/dashboard/review' component={Review} />
-              <Route path='/dashboard/wishlist' component={Wishlist} />
+              {/* <Route path='/dashboard/wishlist' component={Wishlist} /> */}
               <Route path='*' component={Page404} />
             </Switch>
           </div>
-        </Col>
-      </Row>
+        {/* </Col>
+      </Row> */}
     </div>
   );
 };

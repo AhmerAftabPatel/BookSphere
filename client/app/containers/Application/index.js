@@ -36,6 +36,7 @@ import AuthSuccess from '../AuthSuccess';
 import Footer from '../../components/Common/Footer';
 import Page404 from '../../components/Common/Page404';
 import { CART_ITEMS } from '../../constants';
+import OrderProcess from '../orderProcess';
 
 class Application extends React.PureComponent {
   constructor(props) {
@@ -87,8 +88,8 @@ class Application extends React.PureComponent {
                 <Route path='/contact' component={Contact} />
                 <Route path='/brands' component={BrandsPage} />
                 <Route path='/product/:slug' component={ProductPage} />
+                <Route path='/order/process' component={OrderProcess} />
                 <Route path='/order/success/:id' component={OrderSuccess} />
-                <Route path='/order/process/:id' component={OrderSuccess} />
                 <Route path='/order/:id' component={OrderPage} />
                 <Route path='/login' component={Login} />
                 <Route path='/register' component={Signup} />

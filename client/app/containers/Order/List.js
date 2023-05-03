@@ -61,7 +61,7 @@ class List extends React.PureComponent {
     return (
       <div className='order-dashboard'>
         <SubPage
-          title='Your Orders'
+          title='Order history'
           actionTitle={user.role === ROLES.Admin && 'Customer Orders'}
           handleAction={() =>
             user.role === ROLES.Admin &&

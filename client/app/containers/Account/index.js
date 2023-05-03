@@ -11,6 +11,8 @@ import actions from '../../actions';
 
 import AccountDetails from '../../components/Manager/AccountDetails';
 import SubPage from '../../components/Manager/SubPage';
+import Product from '../Product';
+import Address from '../../containers/Address';
 
 class Account extends React.PureComponent {
   componentDidMount() {
@@ -28,6 +30,9 @@ class Account extends React.PureComponent {
             accountChange={accountChange}
             updateProfile={updateProfile}
           />
+          <hr/>
+          <br/>
+          <Address/>
         </SubPage>
       </div>
     );

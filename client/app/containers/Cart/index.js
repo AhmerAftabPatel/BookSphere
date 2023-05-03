@@ -31,7 +31,8 @@ class Cart extends React.PureComponent {
 
     return (
       <div className='cart'>
-        <div className='cart-header'>
+        <div className='cart-header' style={{background : "#25bea2"}}>
+          {/* <h2 style={{textAlign : "center"}}>Cart Items</h2> */}
           {isCartOpen && (
             <Button
               borderless

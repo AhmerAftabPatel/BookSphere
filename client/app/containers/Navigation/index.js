@@ -193,7 +193,7 @@ class Navigation extends React.PureComponent {
               xs={{ size: 12, order: 1 }}
               sm={{ size: 12, order: 1 }}
               md={{ size: 3, order: 1 }}
-              lg={{ size: 3, order: 1 }}
+              lg={{ size: 2, order: 1 }}
               className="pr-0"
             >
               <div className="brand">
@@ -217,7 +217,7 @@ class Navigation extends React.PureComponent {
               xs={{ size: 12, order: 4 }}
               sm={{ size: 12, order: 4 }}
               md={{ size: 12, order: 4 }}
-              lg={{ size: 5, order: 2 }}
+              lg={{ size: 4, order: 2 }}
               className="pt-2 pt-lg-0"
             >
               <Autosuggest
@@ -254,7 +254,7 @@ class Navigation extends React.PureComponent {
               xs={{ size: 12, order: 2 }}
               sm={{ size: 12, order: 2 }}
               md={{ size: 9, order: 1 }}
-              lg={{ size: 4, order: 3 }}
+              lg={{ size: 6, order: 3 }}
               // className='px-0'
             >
               <Navbar color="light" light expand="md" className="mt-1 mt-md-0">
@@ -289,21 +289,56 @@ class Navigation extends React.PureComponent {
                       Shop
                     </NavLink>
                   </NavItem> */}
+                  
+            
                   {authenticated ? (
-                    <UncontrolledDropdown nav inNavbar>
-                      <DropdownToggle nav>
-                        {user.firstName ? user.firstName : 'Welcome'}
-                        <span className="fa fa-chevron-down dropdown-caret"></span>
-                      </DropdownToggle>
-                      <DropdownMenu right>
-                        <DropdownItem
-                          onClick={() => history.push('/dashboard')}
-                        >
-                          Dashboard
-                        </DropdownItem>
-                        <DropdownItem onClick={signOut}>Sign Out</DropdownItem>
-                      </DropdownMenu>
-                    </UncontrolledDropdown>
+                    <div>
+                    <Button
+                      borderless
+                      variant="empty"
+                      size="small"
+                      ariaLabel="open the menu"
+                      icon={<img src="/images/dummy_profile.jpg" height={"25px"} width={"25px"} style={{borderRadius : "10px"}}/>}
+                      text={user.firstName ? user.firstName : 'Welcome'}
+                      onClick={() => history.push('/dashboard')}
+                    />
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <Button
+                      borderless
+                      size="small"
+                      variant="empty"
+                      ariaLabel="open the menu"
+                      text="Manage Order"
+                      onClick={() => history.push('/dashboard/orders')}
+                    />
+                    &nbsp;
+                    |
+                    &nbsp;
+                    <Button
+                      borderless
+                      variant="empty"
+                      size={"small"}
+                      ariaLabel="open the menu"
+                      text="Log Out"
+                      onClick={() => signOut()}
+                    />
+                  </div>
+                    // <UncontrolledDropdown nav inNavbar>
+                    //   <DropdownToggle nav>
+                    //     {user.firstName ? user.firstName : 'Welcome'}
+                    //     <span className="fa fa-chevron-down dropdown-caret"></span>
+                    //   </DropdownToggle>
+                    //   <DropdownMenu right>
+                    //     <DropdownItem
+                    //       onClick={() => history.push('/dashboard')}
+                    //     >
+                    //       Dashboard
+                    //     </DropdownItem>
+                    //     <DropdownItem onClick={signOut}>Sign Out</DropdownItem>
+                    //   </DropdownMenu>
+                    // </UncontrolledDropdown>
                   ) : (
                     <NavItem style={{ cursor: 'pointer' }}>
                       <NavLink
@@ -332,11 +367,14 @@ class Navigation extends React.PureComponent {
                     // </UncontrolledDropdown>
                   )}
                 </Nav>
+                &nbsp;
+                |
                 <CartIcon
                   className="d-none d-md-block"
                   cartItems={cartItems}
                   onClick={toggleCart}
                 />
+                Cart
               </Navbar>
             </Col>
           </Row>
@@ -396,7 +434,7 @@ class Navigation extends React.PureComponent {
           </Container>
         </div>
         {/* <hr/> */}
-        <div className="header-info">
+        <div className="header-info" style={{background :"#25bea2"}}>
           <Container>
             <Row>
               <Col md="4" className="text-center d-none d-md-block">

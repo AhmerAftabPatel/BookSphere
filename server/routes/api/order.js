@@ -48,6 +48,7 @@ router.post('/add', auth, async (req, res) => {
       order: { _id: orderDoc._id }
     });
   } catch (error) {
+    console.log(error)
     res.status(400).json({
       error: 'Your request could not be processed. Please try again.'
     });

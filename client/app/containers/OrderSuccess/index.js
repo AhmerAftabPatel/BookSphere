@@ -16,13 +16,13 @@ import LoadingIndicator from '../../components/Common/LoadingIndicator';
 
 class OrderSuccess extends React.PureComponent {
   componentDidMount() {
-    const id = this.props.match.params.id;
+    const id = this.props.id;
     this.props.fetchOrder(id);
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.match.params.id !== prevProps.match.params.id) {
-      const id = this.props.match.params.id;
+    if (this.props.id !== prevProps.id) {
+      const id = this.props.id;
       this.props.fetchOrder(id);
     }
   }

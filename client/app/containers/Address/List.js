@@ -25,7 +25,7 @@ class List extends React.PureComponent {
     return (
       <>
         <SubPage
-          title='Addresses'
+          title='Your Addresses'
           actionTitle={'Add'}
           handleAction={() => history.push('/dashboard/address/add')}
         >

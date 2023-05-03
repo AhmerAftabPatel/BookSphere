@@ -55,16 +55,16 @@ const ProductList = (props) => {
                         <h1 className="item-name">{product.name}</h1>
                         {product.brand &&
                           Object.keys(product.brand).length > 0 && (
-                            <div className="d-flex justify-content-between">
-                              <p className="by">
+                            <div className="d-flex justify-content-left gap-2">
+                              <p className="by mr-2">
                                 Publisher: <span>{product.brand.name}</span>
                               </p>
                               |
-                              <p className="by">
+                              <p className="by mx-2">
                                 Author: <span>{product.brand.name}</span>
                               </p>
                               |
-                              <p className="by">
+                              <p className="by mx-2">
                                 Sold By: <span>{product.brand.name}</span>
                               </p>
                               {/* |
@@ -77,7 +77,7 @@ const ProductList = (props) => {
                       </div>
                     </div>
                     <div className="d-flex flex-row justify-content-between align-items-center px-4 mb-2 item-footer">
-                      <p className="price mb-0">Price: ${product.price}</p>
+                      <p className="price mb-0">Price: <span style ={{textDecoration: 'line-through'}}>${product.price + 200}</span> | After Discount : <span>$1000</span></p>
                       {product.totalReviews > 0 && (
                         <p className="mb-0">
                           <span className="fs-16 fw-normal mr-1">

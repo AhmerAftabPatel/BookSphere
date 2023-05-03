@@ -190,14 +190,14 @@ class ProductPage extends React.PureComponent {
                 </div>
               </Col>
             </Row>
-            {/* <ProductReviews
+            <ProductReviews
               reviewFormData={reviewFormData}
               reviewFormErrors={reviewFormErrors}
               reviews={reviews}
               reviewsSummary={reviewsSummary}
               reviewChange={reviewChange}
               addReview={addProductReview}
-            /> */}
+            />
           </>
         ) : (
           <NotFound message="No product found." />

@@ -30,7 +30,7 @@ const OrderList = props => {
       return <img className='item-image' src='/images/placeholder-image.png' />;
     }
   };
-
+console.log(orders)
   return (
     <div className='order-list'>
       {orders.map((order, index) => (
@@ -40,10 +40,11 @@ const OrderList = props => {
               <div className='order-first-item p-lg-3'>
                 {renderFirstItem(order)}
               </div>
-              <div className='d-flex flex-column flex-xl-row justify-content-between flex-1 ml-lg-2 mr-xl-4 p-3'>
+              <div className='d-flex flex-column flex-xl-row justify-content-between flex-1 ml-lg-2 mr-xl-4 p-3' style={{position : "relative"}}>
                 <div className='order-details'>
+                <p style={{position : "absolute", right : 10, top : 10, textDecoration  :"underline"}}>Cancel Order</p>
                   <div className='mb-1'>
-                    <span>Status</span>
+                    <strong>Status</strong>
                     {order?.products ? (
                       <span className='order-label order-status'>{` ${order?.products[0].status}`}</span>
                     ) : (
@@ -51,17 +52,17 @@ const OrderList = props => {
                     )}
                   </div>
                   <div className='mb-1'>
-                    <span>Order #</span>
+                    <strong>Order #</strong>
                     <span className='order-label'>{` ${order._id}`}</span>
                   </div>
                   <div className='mb-1'>
-                    <span>Ordered on</span>
+                    <strong>Order Placed</strong>
                     <span className='order-label'>{` ${formatDate(
                       order.created
                     )}`}</span>
                   </div>
                   <div className='mb-1'>
-                    <span>Order Total</span>
+                    <strong>Order Total</strong>
                     <span className='order-label'>{` $${
                       order?.totalWithTax ? order?.totalWithTax : 0
                     }`}</span>
