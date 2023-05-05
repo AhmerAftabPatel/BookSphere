@@ -422,9 +422,10 @@ class Navigation extends React.PureComponent {
                   key={index}
                   md="4"
                   className="text-center d-none d-md-block"
+                  style ={{cursor : 'pointer'}}
                 >
                   |
-                  {/* <i className="fa fa-truck" /> */}
+                  {/* <i className="fa fa-trucFDk" /> */}
                   <span>{genre.name}</span>
                   |
                 </div>

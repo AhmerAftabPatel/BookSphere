@@ -23,18 +23,22 @@ import Brand from '../../../containers/Brand';
 import Merchant from '../../../containers/Merchant';
 import Review from '../../../containers/Review';
 import Wishlist from '../../../containers/WishList';
+import LogManagement from '../../../containers/LogManagement';
+import Promotion from '../../../containers/Promotion';
 
 const Admin = props => {
   return (
-    <div className='admin'>
-      {/* <Row> */}
-        {/* <Col xs='12' md='5' xl='3'>
+    <div className='admin' style={{width : "100%"}}>
+      <Row>
+        <Col xs='12' md='5' xl='3'>
           <AccountMenu {...props} />
-        </Col> */}
-        {/* <Col xs='12' md='7' xl='9'> */}
+        </Col>
+        <Col xs='12' md='7' xl='9'>
           <div className='panel-body'>
             <Switch>
               <Route exact path='/dashboard' component={Account} />
+              <Route exact path='/dashboard/logmanagement' component={LogManagement} />
+              <Route exact path='/dashboard/promotion' component={Promotion} />
               <Route path='/dashboard/security' component={AccountSecurity} />
               <Route path='/dashboard/address' component={Address} />
               <Route path='/dashboard/product' component={Product} />
@@ -48,8 +52,8 @@ const Admin = props => {
               <Route path='*' component={Page404} />
             </Switch>
           </div>
-        {/* </Col>
-      </Row> */}
+        </Col>
+      </Row>
     </div>
   );
 };

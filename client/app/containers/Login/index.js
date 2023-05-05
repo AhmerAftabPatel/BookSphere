@@ -116,12 +116,12 @@ class Login extends React.PureComponent {
             </div>
             <br />
             <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-center">
-              <Link
+              {/* <Link
                 className="redirect-link forgot-password-link"
                 to={'/forgot-password'}
               >
                 Forgot Username?
-              </Link>
+              </Link> */}
               &nbsp; &nbsp; &nbsp; &nbsp;
               <Link
                 className="redirect-link forgot-password-link"

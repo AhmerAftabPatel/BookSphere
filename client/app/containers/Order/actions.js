@@ -209,9 +209,9 @@ export const addOrder = (next) => {
           cartId,
           total,
         })
-
-        dispatch(next(response.data.order._id))
         dispatch(clearCart())
+        dispatch(next(response.data.order._id))
+        
       }
     } catch (error) {
       console.log(error, 'erroer')
@@ -225,9 +225,10 @@ export const placeOrder = () => {
     const token = localStorage.getItem('token')
 
     const cartItems = getState().cart.cartItems
-
+    // alert(cartItems.length)
     if (token && cartItems.length > 0) {
-      Promise.all([dispatch(getCartId())]).then(() => {
+      Promise.all([dispatch(getCartId())]).then((res) => {
+        console.log(res,"caart")
         dispatch(push(`/order/process`))
       })
     }

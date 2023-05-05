@@ -39,7 +39,7 @@ const AddProduct = props => {
     <div className='add-product'>
       <form onSubmit={handleSubmit} noValidate>
         <Row>
-          <Col xs='12' lg='6'>
+          <Col xs='12' lg='12'>
             <Input
               type={'text'}
               error={formErrors['sku']}
@@ -52,11 +52,11 @@ const AddProduct = props => {
               }}
             />
           </Col>
-          <Col xs='12' lg='6'>
+          <Col xs='12' lg='12'>
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'Product Title'}
               name={'name'}
               placeholder={'Product Name'}
               value={productFormData.name}
@@ -73,6 +73,32 @@ const AddProduct = props => {
               name={'description'}
               placeholder={'Product Description'}
               value={productFormData.description}
+              onInputChange={(name, value) => {
+                productChange(name, value);
+              }}
+            />
+          </Col>
+          <Col xs='12' lg='6'>
+            <Input
+              type={'text'}
+              error={formErrors['name']}
+              label={'Original Price'}
+              name={'name'}
+              placeholder={'Original Price'}
+              value={productFormData.name}
+              onInputChange={(name, value) => {
+                productChange(name, value);
+              }}
+            />
+          </Col>
+          <Col xs='12' lg='6'>
+            <Input
+              type={'text'}
+              error={formErrors['name']}
+              label={'Discounted Price'}
+              name={'name'}
+              placeholder={'Discounted Price'}
+              value={productFormData.name}
               onInputChange={(name, value) => {
                 productChange(name, value);
               }}
@@ -123,7 +149,7 @@ const AddProduct = props => {
               disabled={user.role === ROLES.Merchant}
               error={formErrors['brand']}
               name={'brand'}
-              label={'Select Brand'}
+              label={'Select Author'}
               value={
                 user.role === ROLES.Merchant ? brands[1] : productFormData.brand
               }

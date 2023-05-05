@@ -68,11 +68,13 @@ class List extends React.PureComponent {
             history.push('/dashboard/orders/customers')
           }
         >
+          <div style={{width : "500px", textAlign : "center"}}>
           <OrderSearch
             onBlur={this.handleOrderSearch}
             onSearch={this.handleOrderSearch}
             onSearchSubmit={this.handleOrderSearch}
           />
+          </div>
 
           {isLoading && <LoadingIndicator />}
           {displayOrders && (

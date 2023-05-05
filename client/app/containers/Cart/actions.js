@@ -158,6 +158,7 @@ export const getCartId = () => {
       const products = getCartItems(cartItems);
 
       // create cart id if there is no one
+      alert(cartId)
       if (!cartId) {
         const response = await axios.post(`/api/cart/add`, { products });
 

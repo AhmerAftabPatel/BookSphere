@@ -39,13 +39,22 @@ const OrderItems = props => {
 
     if (item.status === CART_ITEM_STATUS.Delivered) {
       return (
+        <>
         <Link
           to={`/product/${item.product.slug}`}
           className='btn-link text-center py-2 fs-12'
           style={{ minWidth: 120 }}
         >
-          Reivew Product
+          Review Product
         </Link>
+        <Link
+          to={`/product/return/${item.product.slug}`}
+          className='btn-link text-center py-2 fs-12'
+          style={{ minWidth: 120 }}
+        >
+          Return Product
+        </Link>
+        </>
       );
     } else if (item.status !== 'Cancelled') {
       if (!isAdmin) {

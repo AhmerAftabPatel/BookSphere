@@ -69,7 +69,7 @@ const Homepage = () => {
                 style={{ overflow: 'hidden' }}
               >
                 <div >
-                  <img style={{ height: '400px', width: '100%' }} src={`/images/book-covers/${genre.imageUrl}`} />
+                  <img style={{ height: '400px', width: '100%' }} src={`/images/bookCover/${genre.imageUrl}`} />
                 </div>
                 {/* <CardTitle tag="h5">{genre.name}</CardTitle> */}
                 {/* <div */}
@@ -94,7 +94,7 @@ const Homepage = () => {
                 style={{  overflow: 'hidden' }}
               >
                 <div >
-                  <img style={{ height: '400px', width: '100%' }} src={`/images/book-covers/${genre.imageUrl}`} />
+                  <img style={{ height: '400px', width: '100%' }} src={`/images/bookCover/${genre.imageUrl}`} />
                 </div>
                 {/* <CardTitle tag="h5">{genre.name}</CardTitle> */}
                 {/* <div */}

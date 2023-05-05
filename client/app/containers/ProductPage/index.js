@@ -80,9 +80,9 @@ class ProductPage extends React.PureComponent {
                     }`}
                   />
                   {product.inventory <= 0 && !shopFormErrors['quantity'] ? (
-                    <p className="stock out-of-stock">Out of stock</p>
+                    <p className="stock out-of-stock">This Book is Out of stock</p>
                   ) : (
-                    <p className="stock in-stock">In stock</p>
+                    <p className="stock in-stock"></p>
                   )}
                 </div>
               </Col>
@@ -93,12 +93,14 @@ class ProductPage extends React.PureComponent {
                       <h1 className="item-name one-line-ellipsis">
                         {product.name}
                       </h1>
-                      <p className="sku">{product.sku}</p>
+                      <p className="sku"><strong>Isbn </strong>: {product.sku}</p>
                       <div style={{ display: 'flex' }}>
                         <p className="sku">Publisher : {product.brand.name}</p>{' '}
                         &nbsp;
+                        |
+                        &nbsp;
                         <p className="sku">
-                          Author : Maheba&nbsp;&nbsp;&nbsp;&nbsp;
+                          Author : {product.author}&nbsp;&nbsp;&nbsp;&nbsp;
                         </p>
                       </div>
                       <hr />

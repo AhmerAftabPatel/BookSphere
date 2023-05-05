@@ -116,12 +116,12 @@ class Signup extends React.PureComponent {
             </Col> */}
           </Row>
           <hr />
-          <Checkbox
+          {/* <Checkbox
             id={'subscribe'}
             label={'Subscribe to newsletter'}
             checked={isSubscribed}
             onChange={subscribeChange}
-          />
+          /> */}
           <div className='d-flex flex-column flex-md-row align-items-md-center justify-content-between'>
             <Button
               type='submit'

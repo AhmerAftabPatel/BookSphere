@@ -6,11 +6,7 @@
 
 export const Genres = [
   {
-    name: 'Fiction',
-    image: '',
-  },
-  {
-    name: 'Thriller',
+    name: 'All',
     image: '',
   },
   {
@@ -18,11 +14,19 @@ export const Genres = [
     image: '',
   },
   {
-    name: 'Science-Fiction',
+    name: 'Young Adults',
     image: '',
   },
   {
-    name: 'History',
+    name: 'Fiction',
+    image: '',
+  },
+  {
+    name: 'Non-Fiction',
+    image: '',
+  },
+  {
+    name: 'Text-Books',
     image: '',
   },
 ]

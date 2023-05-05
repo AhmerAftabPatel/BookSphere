@@ -23,11 +23,11 @@ const Customer = props => {
 
   return (
     <div className='customer'>
-      <Row>
+      {/* <Row>
         <Col xs='12' md='5' xl='3'>
           <AccountMenu {...props} />
         </Col>
-        <Col xs='12' md='7' xl='9'>
+        <Col xs='12' md='7' xl='9'> */}
           <div className='panel-body'>
             <Switch>
               <Route exact path='/dashboard' component={Account} />
@@ -40,8 +40,8 @@ const Customer = props => {
               <Route path='*' component={Page404} />
             </Switch>
           </div>
-        </Col>
-      </Row>
+        {/* </Col>
+      </Row> */}
     </div>
   );
 };

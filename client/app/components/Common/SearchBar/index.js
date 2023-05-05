@@ -76,8 +76,8 @@ class SearchBar extends React.Component {
     }`}`;
 
     return (
-      <form onSubmit={e => this._handleSubmit(e)} noValidate>
-        <div className={styles}>
+      <form onSubmit={e => this._handleSubmit(e)} noValidate >
+        <div className={styles} >
           <div className='input-text-block'>
             <input
               autoComplete={autoComplete}
@@ -93,7 +93,7 @@ class SearchBar extends React.Component {
               onBlur={e => this._onBlur(e)}
               onKeyPress={this.props.onKeyPress || null}
             />
-            <Button type='submit' variant='primary' text={btnText} />
+            {/* <Button type='submit' style={{width : "100px"}} variant='primary' text={btnText} /> */}
           </div>
         </div>
       </form>

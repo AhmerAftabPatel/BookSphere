@@ -32,10 +32,10 @@ const AccountMenu = props => {
         // ariaLabel={isMenuOpen ? 'dashboard menu expanded' : 'dashboard menu collapse'}
         onClick={toggleMenu}
       />
-      <h3 className='panel-title'>Account</h3>
+      {/* <h3 className='panel-title'>Account</h3> */}
       <Navbar color='light' light expand='md'>
         <Collapse isOpen={isMenuOpen} navbar>
-          <ul className='panel-links'>
+          <ul className='panel-links' style={{textAlign : "left",background : ""}}>
             {links.map((link, index) => {
               const PREFIX = link.prefix ? link.prefix : '';
               const isProviderAllowed = getAllowedProvider(link);
@@ -47,7 +47,7 @@ const AccountMenu = props => {
                     activeClassName='active-link'
                     exact
                   >
-                    {link.name}
+                    &nbsp;{link.name}
                   </NavLink>
                 </li>
               );

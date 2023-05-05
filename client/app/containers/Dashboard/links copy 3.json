@@ -7,6 +7,13 @@
     { "to": "/users", "name": "Manage Users", "prefix": "/dashboard" },
     { "to": "/promotion", "name": "Promotion", "prefix": "/dashboard" },
     { "to": "/payment", "name": "Payment", "prefix": "/dashboard" },
+    {
+      "to": "/security",
+      "name": "Account Security",
+      "prefix": "/dashboard",
+      "provider": ["Email"]
+    },
+    { "to": "/address", "name": "Address", "prefix": "/dashboard" },
     { "to": "/category", "name": "Categories", "prefix": "/dashboard" },
     { "to": "/brand", "name": "Authors", "prefix": "/dashboard" },
     { "to": "/merchant", "name": "Seller", "prefix": "/dashboard" },

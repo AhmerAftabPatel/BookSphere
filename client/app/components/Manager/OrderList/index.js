@@ -30,7 +30,6 @@ const OrderList = props => {
       return <img className='item-image' src='/images/placeholder-image.png' />;
     }
   };
-console.log(orders)
   return (
     <div className='order-list'>
       {orders.map((order, index) => (

@@ -98,12 +98,7 @@ const ProductFilter = (props) => {
         <Form>
           <FormGroup check inline>
             <Input type="checkbox" />
-            <Label check>Fiction</Label>
-          </FormGroup>
-          <br />
-          <FormGroup check inline>
-            <Input type="checkbox" />
-            <Label check>Thriller</Label>
+            <Label check>All</Label>
           </FormGroup>
           <br />
           <FormGroup check inline>
@@ -113,17 +108,22 @@ const ProductFilter = (props) => {
           <br />
           <FormGroup check inline>
             <Input type="checkbox" />
-            <Label check>Science-Fiction</Label>
+            <Label check>Young Adults</Label>
           </FormGroup>
           <br />
           <FormGroup check inline>
             <Input type="checkbox" />
-            <Label check>Histor</Label>
+            <Label check>Fiction</Label>
           </FormGroup>
           <br />
           <FormGroup check inline>
             <Input type="checkbox" />
-            <Label check>Others</Label>
+            <Label check>Non-Fiction</Label>
+          </FormGroup>
+          <br />
+          <FormGroup check inline>
+            <Input type="checkbox" />
+            <Label check>Text Books</Label>
           </FormGroup>
         </Form>
       </div>
